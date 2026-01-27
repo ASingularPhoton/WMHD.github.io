@@ -1,86 +1,18 @@
-/* ===== RESET ===== */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; font-family: "Roboto", Helvetica, Arial, sans-serif; background: black; }
+<!-- NAVBAR BELOW HERO -->
+<nav class="navbar">
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li> 
 
-/* ===== HERO / BANNER ===== */
-.hero {
-  width: 100%;
-  background-image: url("./images/background.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding: 80px 20px 40px 20px;
-  color: white;
-}
+      <li class="brand">
+        <a href="index.html">
+          <img src="./images/logo.png" alt="WMHD Logo">
+        </a>
+      </li>
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-}
-
-.hero-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 20px;
-}
-
-/* ===== HERO TEXT ===== */
-.textwrap h1 { margin: 10px 0; line-height: 1.1; }
-.textwrap h2 { margin: 10px 0; font-weight: 400; }
-
-.heavy { display: block; font-size: 5rem; font-weight: 800; letter-spacing: 2px; }
-.light { display: block; font-size: 3rem; font-weight: 300; }
-
-/* ===== NAVBAR BELOW HERO ===== */
-.navbar {
-  width: 100%;
-  background: rgba(0,0,0,0.85);
-  padding: 10px 0;
-  align-items: center;
-}
-
-.nav-container {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.brand img { height: 40px; }
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.nav-links a:hover { text-decoration: underline; }
-
-/* ===== MOBILE ===== */
-@media (max-width: 700px) {
-  .heavy { font-size: 3rem; }
-  .light { font-size: 2rem; }
-  .textwrap h2 { font-size: 1.6rem; }
-  .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
-}
+      <li><a href="https://commerce.cashnet.com/rosehulmanem?CNAME=STUDENT%20ACTV">Store</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeggZD4Busmn-YDP0NbEWqNMB_leOIePlblqkMUsb9WULST9g/viewform">Rental/DJ Requests</a></li>
+    </ul>
+  </div>
+</nav>
