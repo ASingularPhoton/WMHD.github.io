@@ -5,11 +5,11 @@ html, body { margin: 0; padding: 0; font-family: "Roboto", Helvetica, Arial, san
 /* ===== HERO / BANNER ===== */
 .hero {
   width: 100%;
-  background-image: url("images/background.jpg");
+  background-image: url("./images/background.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
-  padding: 80px 20px;
+  padding: 80px 20px 40px 20px;
   color: white;
 }
 
@@ -26,9 +26,10 @@ html, body { margin: 0; padding: 0; font-family: "Roboto", Helvetica, Arial, san
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
+/* ===== HERO TEXT ===== */
 .textwrap h1 { margin: 10px 0; line-height: 1.1; }
 .textwrap h2 { margin: 10px 0; font-weight: 400; }
 
@@ -74,5 +75,5 @@ html, body { margin: 0; padding: 0; font-family: "Roboto", Helvetica, Arial, san
   .heavy { font-size: 3rem; }
   .light { font-size: 2rem; }
   .textwrap h2 { font-size: 1.6rem; }
-  .nav-links { gap: 15px; }
+  .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
 }
