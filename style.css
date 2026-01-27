@@ -1,52 +1,18 @@
-/* ============================
-   BASE TYPOGRAPHY
-============================ */
+/* ===== RESET ===== */
 
-/* 1rem = 10px */
-html {
-  font-size: 62.5%;
+* {
+  box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
-  font-size: 1.5em;
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #FFFFFF;
+  padding: 0;
+  height: 100%;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   background: black;
 }
 
-/* ============================
-   LINKS
-============================ */
-
-a {
-  text-decoration: none;
-  color: #EF6D3D;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ============================
-   HEADINGS
-============================ */
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-h1 { font-size: 4rem; }
-h2 { font-size: 2.6rem; }
-h3 { font-size: 2.2rem; }
-
-/* ============================
-   NAVBAR
-============================ */
+/* ===== NAVBAR ===== */
 
 .navbar {
   position: fixed;
@@ -62,14 +28,15 @@ h3 { font-size: 2.2rem; }
   padding: 10px 20px;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .brand img {
   height: 40px;
-  width: auto;
 }
+
+/* Nav Links */
 
 .nav-links {
   list-style: none;
@@ -80,17 +47,16 @@ h3 { font-size: 2.2rem; }
 }
 
 .nav-links a {
-  color: #FFFFFF;
-  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 .nav-links a:hover {
   text-decoration: underline;
 }
 
-/* ============================
-   HERO / BANNER
-============================ */
+/* ===== HERO ===== */
 
 .hero {
   height: 100vh;
@@ -106,85 +72,57 @@ h3 { font-size: 2.2rem; }
   background: rgba(0,0,0,0.6);
 }
 
+/* Center Content */
+
 .hero-content {
   position: relative;
   height: 100%;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 
   text-align: center;
   color: white;
-  padding: 20px;
 }
 
-/* ============================
-   HERO TEXT
-============================ */
+/* ===== TEXT ===== */
 
-.tagline {
-  font-size: 2.0rem;
+.textwrap h1 {
+  margin: 10px 0;
+  line-height: 1.1;
+}
+
+.textwrap h2 {
+  margin: 10px 0;
   font-weight: 400;
-  margin-bottom: 10px;
 }
+
+/* Title Styling */
 
 .heavy {
-  font-size: 5rem;
+  display: block;
+  font-size: 4.5rem;
   font-weight: 800;
   letter-spacing: 2px;
 }
 
 .light {
-  font-size: 3rem;
+  display: block;
+  font-size: 2.8rem;
   font-weight: 300;
 }
 
-.school {
-  font-size: 1.6rem;
-  margin-top: 15px;
-}
-
-/* ============================
-   CONTENT SECTIONS
-============================ */
-
-section.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 80px 20px;
-}
-
-p {
-  font-size: 1.6rem;
-  max-width: 800px;
-}
-
-/* ============================
-   MOBILE RESPONSIVE
-============================ */
+/* ===== MOBILE ===== */
 
 @media (max-width: 700px) {
 
   .heavy {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 
   .light {
-    font-size: 2.1rem;
-  }
-
-  .tagline {
-    font-size: 1.6rem;
-  }
-
-  .school {
-    font-size: 1.4rem;
-  }
-
-  .nav-links {
-    gap: 15px;
+    font-size: 2rem;
   }
 
 }
