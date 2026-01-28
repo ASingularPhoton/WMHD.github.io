@@ -1,18 +1,101 @@
-<!-- NAVBAR BELOW HERO -->
-<nav class="navbar">
-  <div class="nav-container">
-    <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li> 
+/* ===== PAGE SPLIT ===== */
+.page-layout {
+  height: 100vh;               /* full screen */
+  display: flex;
+  flex-direction: column;
+}
 
-      <li class="brand">
-        <a href="index.html">
-          <img src="./images/logo.png" alt="WMHD Logo">
-        </a>
-      </li>
+/* ===== HERO (80%) ===== */
+.hero {
+  flex: 0 0 80%;
+  position: relative;
+  background: url("./images/banner.jpg") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-      <li><a href="https://commerce.cashnet.com/rosehulmanem?CNAME=STUDENT%20ACTV">Store</a></li>
-      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeggZD4Busmn-YDP0NbEWqNMB_leOIePlblqkMUsb9WULST9g/viewform">Rental/DJ Requests</a></li>
-    </ul>
-  </div>
-</nav>
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+/* ===== NAVBAR (20%) ===== */
+.navbar {
+  flex: 0 0 20%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+/* ===== NAV CONTENT ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.left,
+.right {
+  display: flex;
+  gap: 30px;
+}
+
+.brand img {
+  height: 40px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 700px) {
+  .page-layout {
+    height: auto;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .navbar {
+    min-height: 20vh;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .left,
+  .right {
+    flex-direction: column;
+    align-items: center;
+  }
+}
