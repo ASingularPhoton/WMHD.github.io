@@ -86,13 +86,18 @@ h1, h2, h3, p {
   display: block;
 }
 
+/* ================= NAV LINKS ================= */
 .nav-links a {
-  color: white;
+  color: white !important;       /* enforce white */
   text-decoration: none;
   font-size: 1rem;
+  transition: color 0.2s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a:active {
+  color: #FFD700 !important;     /* golden on hover/click/focus */
   text-decoration: underline;
 }
 
