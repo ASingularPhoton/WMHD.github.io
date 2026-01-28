@@ -2,71 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | WMHD Radio</title>
-  <meta name="description" content="About WMHD Radio">
   <link rel="stylesheet" href="./style.css">
+  <style>
+    body {
+      margin: 0;
+      background: rgba(0,0,0,0.85);
+      color: white;
+      font-family: sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    h1, h2 {
+      color: white;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    p, ul {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .clubimage {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 0 auto 30px auto;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 
-<div class="page-layout">
+<section class="container">
 
-  <!-- ================= HERO ================= -->
-  <section class="hero" style="flex: 0 0 20vh; background: rgba(0,0,0,0.85);">
-    <div class="hero-content">
-      <h1 style="color:white; text-align:center;">About WMHD Radio</h1>
-    </div>
-  </section>
+  <h1>About WMHD Radio</h1>
 
-  <!-- ================= MAIN CONTENT ================= -->
-  <section class="container content" style="flex: 1; background: rgba(0,0,0,0.85); color:white; padding:40px; max-width:1000px; margin:auto;">
+  <img src="images/club-photo2.jpg" alt="WMHD Radio Club" class="clubimage">
 
-    <img src="images/club-photo2.jpg" alt="WMHD Radio Club" class="clubimage" style="width:100%; max-width:600px; display:block; margin: 0 auto 20px auto; border-radius:10px;">
+  <p>
+    WMHD Radio is a student-run radio that offers online music, equipment rentals, and DJ services for the Rose-Hulman Institute of Technology community.
+    Our studio is located in the basement of BSB Hall, room 032.
+  </p>
 
-    <p>
-      WMHD Radio is a student-run radio that offers online music, equipment rentals, and DJ services for the Rose-Hulman Institute of Technology community.
-      Our studio is located in the basement of BSB Hall, room 032.
-    </p>
+  <h2>Club Meetings</h2>
+  <p>
+    WMHD Online Radio has general club meetings in the basement of BSB, room 032.
+    The time for next quarter is still tentative.
+    In these meetings, we discuss/listen to music, plan events, stream live radio shows,
+    and run workshops on DJing, equipment setup, and recording.
+  </p>
 
-    <h2>Club Meetings</h2>
-    <p>
-      WMHD Online Radio has general club meetings in the basement of BSB, room 032.
-      The time for next quarter is still tentative.
-      In these meetings, we discuss/listen to music, plan events, stream live radio shows,
-      and run workshops on DJing, equipment setup, and recording.
-    </p>
+  <h2>Current Officers</h2>
+  <ul>
+    <li><b>General Manager/President</b>: Henry Morin</li>
+    <li><b>Equipment Manager</b>: No one!</li>
+    <li><b>Personnel Director</b>: Charlie L.</li>
+    <li><b>Program Director</b>: Peter F</li>
+    <li><b>Communications Director</b>: Paul Sampson</li>
+    <li><b>Webmaster</b>: James Harris</li>
+    <li><b>Treasurer</b>: Ben Wilson</li>
+    <li><b>Podcast Director</b>: Randyn</li>
+    <li><b>Faculty Advisor</b>: Landon</li>
+  </ul>
 
-    <h2>Current Officers</h2>
-    <ul>
-      <li><b>General Manager/President</b>: Henry Morin</li>
-      <li><b>Equipment Manager</b>: No one!</li>
-      <li><b>Personnel Director</b>: Charlie L.</li>
-      <li><b>Program Director</b>: Peter F</li>
-      <li><b>Communications Director</b>: Paul Sampson</li>
-      <li><b>Webmaster</b>: James Harris</li>
-      <li><b>Treasurer</b>: Ben Wilson</li>
-      <li><b>Podcast Director</b>: Randyn</li>
-      <li><b>Faculty Advisor</b>: Landon</li>
-    </ul>
+  <h2>Room Info</h2>
+  <p>
+    We have four main rooms in BSB basement: the Broadcasting Room (BSB032), Recording Studio (BSB030),
+    Podcasting Studio (BSB028), and Music Lounge (BSB022).
+    We also have a storage room for CDs, records, and equipment.
+    Every Rose-Hulman student is welcome to use the rooms.
+    See <a href="services.html">Services</a> for info about the recording and podcast studios.
+    Open hours are posted below.
+  </p>
 
-    <h2>Room Info</h2>
-    <p>
-      We have four main rooms in BSB basement: the Broadcasting Room (BSB032), Recording Studio (BSB030),
-      Podcasting Studio (BSB028), and Music Lounge (BSB022).
-      We also have a storage room for CDs, records, and equipment.
-      Every Rose-Hulman student is welcome to use the rooms.
-      See <a href="services.html" style="color:#FFD700;">Services</a> for info about the recording and podcast studios.
-      Open hours are posted below.
-    </p>
+  <h2>Open Radio Room Hours and Weekly Events</h2>
+  <p>
+    <b>Open Hours:</b>
+    Posted in our Discord and outside our door. Contact an officer if you need access to the space.
+  </p>
 
-    <h2>Open Radio Room Hours and Weekly Events</h2>
-    <p>
-      <b>Open Hours:</b>
-      Posted in our Discord and outside our door. Contact an officer if you need access to the space.
-    </p>
-
-  </section>
-
-</div>
+</section>
 
 </body>
 </html>

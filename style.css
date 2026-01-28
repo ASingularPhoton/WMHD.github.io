@@ -12,6 +12,8 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
+  background: rgba(0,0,0,0.85);
+  color: white;
 }
 
 h1, h2, h3, p {
@@ -39,7 +41,6 @@ h1, h2, h3, p {
 .hero-content {
   position: relative;
   z-index: 2;
-  color: white;
 }
 
 .overlay {
@@ -50,33 +51,29 @@ h1, h2, h3, p {
 
 /* ================= NAVBAR ================= */
 .navbar {
-  flex: 0 0 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("./images/banner.jpg") no-repeat center/cover;
-  position: relative;
+  background: rgba(0,0,0,0.85);
+  width: 100%;
 }
 
 .nav-container {
   width: 100%;
   max-width: 1100px;
+  margin: auto;
   padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
 
-/* NAV CONTENT */
 .nav-links {
   list-style: none;
   display: contents;
 }
 
-.left {
+.left,
+.right {
   display: flex;
   gap: 30px;
-  justify-content: flex-start;
 }
 
 .brand {
@@ -84,14 +81,8 @@ h1, h2, h3, p {
   justify-content: center;
 }
 
-.right {
-  display: flex;
-  gap: 30px;
-  justify-content: flex-end;
-}
-
 .brand img {
-  height: 40px;
+  height: 60px;
   display: block;
 }
 
@@ -117,10 +108,12 @@ h1, h2, h3, p {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 8px;
 }
 
 .services-grid .service h3 {
   margin: 10px 0 5px;
+  color: white;
 }
 
 .services-grid .service p {
@@ -138,46 +131,20 @@ h1, h2, h3, p {
     min-height: 70vh;
   }
 
-/* ===== NAVBAR ===== */
-.navbar {
-  flex: 0 0 10%; /* or 20% of the page layout if you prefer */
-  background: rgba(0,0,0,0.85); /* Grey background */
-  display: flex;
-  justify-content: center; /* centers the container */
-  align-items: center;
-  padding: 0 20px;
-}
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.nav-container {
-  width: 100%;
-  max-width: 1100px;
-  display: flex;
-  justify-content: space-between; /* left, logo, right */
-  align-items: center;
-}
+  .left,
+  .right {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 
-.left,
-.right {
-  display: flex;
-  gap: 30px;
-}
-
-.brand {
-  display: flex;
-  justify-content: center;
-  flex: 0 0 auto;
-}
-
-.brand img {
-  height: 60px; /* increase logo size */
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 }
