@@ -20,6 +20,29 @@ h1, h2, h3, p {
   margin: 0;
 }
 
+/* ================= DISCORD OVERLAY ================= */
+.discord-overlay {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  transition: transform 0.2s ease-in-out;
+}
+
+.discord-overlay img {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.discord-overlay:hover img {
+  transform: scale(1.1);
+}
+
+.discord-overlay a {
+  display: block;
+}
+
 /* ================= PAGE SPLIT ================= */
 .page-layout {
   height: 100vh;
