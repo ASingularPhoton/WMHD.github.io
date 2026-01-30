@@ -115,7 +115,7 @@ h1, h2, h3, p {
 
 /* ================= NAVBAR ================= */
 .navbar {
-  background: rgba(60,60,60,0.9);
+  background: rgba(26, 26, 26, 0.9);
   width: 100%;
   padding: 7px 0;
   flex: 0 0 auto;
