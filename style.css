@@ -102,14 +102,14 @@ h1, h2, h3, p {
 
 .nav-left {
   display: flex;
-  gap: 60px;
+  gap: 100px;
   align-items: center;
   justify-content: flex-end;
 }
 
 .nav-right {
   display: flex;
-  gap: 60px;
+  gap: 100px;
   align-items: center;
   justify-content: flex-start;
 }
@@ -118,11 +118,13 @@ h1, h2, h3, p {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .nav-brand img {
-  height: 100px;
+  height: 140px;
   display: block;
+  object-fit: contain;
 }
 
 /* ================= NAV LINKS ================= */
