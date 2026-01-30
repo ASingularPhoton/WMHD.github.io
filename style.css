@@ -20,7 +20,17 @@ h1, h2, h3, p {
   margin: 0;
 }
 
-/* ================= DISCORD OVERLAY ================= */
+/* ================= FADE-IN ANIMATIONS ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  animation: fadeIn 0.8s ease-in-out;
+  }
+}
+
 .discord-overlay {
   position: fixed;
   bottom: 30px;
@@ -33,7 +43,7 @@ h1, h2, h3, p {
   width: 60px;
   height: 60px;
   display: block;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
 .discord-overlay:hover img {
@@ -109,6 +119,7 @@ h1, h2, h3, p {
   width: 100%;
   padding: 7px 0;
   flex: 0 0 auto;
+  animation: fadeIn 0.8s ease-in-out 0.2s backwards;
   order: 2;
 }
 
