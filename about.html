@@ -127,6 +127,14 @@
       }
     }
   </style>
+  <script>
+    window.addEventListener('pageshow', function() {
+      document.body.style.animation = 'none';
+      setTimeout(function() {
+        document.body.style.animation = 'fadeIn 0.8s ease-in-out';
+      }, 10);
+    });
+  </script>
 </head>
 <body>
 
