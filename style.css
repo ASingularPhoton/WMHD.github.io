@@ -24,12 +24,12 @@ h1, h2, h3, p {
 .page-layout {
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 /* ================= HERO ================= */
 .hero {
-  flex: 0 0 80%;
+  flex: 1;
   position: relative;
   background: url("./images/banner.jpg") no-repeat center/cover;
   display: flex;
@@ -70,14 +70,14 @@ h1, h2, h3, p {
 
 .nav-left {
   display: flex;
-  gap: 30px;
+  gap: 60px;
   align-items: center;
   justify-content: flex-end;
 }
 
 .nav-right {
   display: flex;
-  gap: 30px;
+  gap: 60px;
   align-items: center;
   justify-content: flex-start;
 }
@@ -89,7 +89,7 @@ h1, h2, h3, p {
 }
 
 .nav-brand img {
-  height: 60px;
+  height: 100px;
   display: block;
 }
 
