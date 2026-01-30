@@ -53,9 +53,11 @@ h1, h2, h3, p {
 .navbar {
   background: rgba(0,0,0,0.85);
   width: 100%;
+  padding: 10px 0;
 }
 
 .nav-container {
+  list-style: none;
   width: 100%;
   max-width: 1100px;
   margin: auto;
@@ -64,47 +66,54 @@ h1, h2, h3, p {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
-.nav-links {
-  list-style: none;
-  display: contents;
-}
-
-.left,
-.right {
+.nav-left,
+.nav-right {
   display: flex;
   gap: 30px;
   align-items: center;
 }
 
-.brand {
+.nav-brand {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.brand img {
-  height: 100px;
+.nav-brand img {
+  height: 60px;
   display: block;
 }
 
 /* ================= NAV LINKS ================= */
-.left a,
-.right a {
+.nav-left a,
+.nav-right a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.2s;
 }
 
-.left a:hover,
-.left a:focus,
-.left a:active,
-.right a:hover,
-.right a:focus,
-.right a:active {
+.nav-left a:hover,
+.nav-left a:focus,
+.nav-left a:active,
+.nav-right a:hover,
+.nav-right a:focus,
+.nav-right a:active {
   color: #FFD700;
+}
+
+@media (max-width: 700px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-brand img {
+    height: 50px;
+  }
 }
 
 /* ================= SERVICES GRID ================= */
