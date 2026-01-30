@@ -60,9 +60,10 @@ h1, h2, h3, p {
   max-width: 1100px;
   margin: auto;
   padding: 0 20px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 40px;
 }
 
 .nav-links {
@@ -74,15 +75,17 @@ h1, h2, h3, p {
 .right {
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 
 .brand {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .brand img {
-  height: 60px;
+  height: 100px;
   display: block;
 }
 
