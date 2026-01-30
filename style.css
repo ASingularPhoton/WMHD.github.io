@@ -24,7 +24,7 @@ h1, h2, h3, p {
 .page-layout {
   height: 100vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 /* ================= HERO ================= */
@@ -36,11 +36,23 @@ h1, h2, h3, p {
   justify-content: center;
   align-items: center;
   text-align: center;
+  order: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
+}
+
+.textwrap h1 {
+  background: maroon;
+  color: #fff;
+  display: inline-block;
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 30px;
+  margin: 10px 0;
+  padding: 10px;
+  text-transform: uppercase;
 }
 
 .overlay {
@@ -54,6 +66,8 @@ h1, h2, h3, p {
   background: rgba(0,0,0,0.85);
   width: 100%;
   padding: 10px 0;
+  flex: 0 0 auto;
+  order: 2;
 }
 
 .nav-container {
