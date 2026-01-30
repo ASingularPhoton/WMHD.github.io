@@ -10,29 +10,77 @@
       margin: 0;
       background: rgba(0,0,0,0.85);
       color: white;
-      font-family: sans-serif;
-      line-height: 1.6;
+      font-family: Lato, sans-serif;
+      line-height: 1.8;
     }
 
     .container {
       width: 100%;
       max-width: 1200px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 40px 20px 100px 20px;
       box-sizing: border-box;
     }
 
-    h1, h2 {
+    h1 {
       color: white;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       text-align: center;
+      font-size: 2.5em;
+      margin-top: 20px;
     }
 
     h2 {
-      margin-top: 30px;
+      color: #FFD700;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      border-bottom: 2px solid #FFD700;
+      padding-bottom: 10px;
     }
 
     p, ul {
+      margin-bottom: 20px;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    .intro-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .intro-text {
+      font-size: 1.1em;
+    }
+
+    .clubimage {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .grid-section {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 8px;
+      border-left: 4px solid #FFD700;
+    }
+
+    .grid-section h2 {
+      margin-top: 0;
       margin-bottom: 20px;
     }
 
@@ -42,24 +90,40 @@
     }
 
     ul li {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    ul li:before {
+      content: "▸";
+      color: #FFD700;
+      position: absolute;
+      left: 0;
     }
 
     a {
       color: #FFD700;
       text-decoration: none;
+      font-weight: 500;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    .clubimage {
-      width: 100%;
-      max-width: 800px;
-      display: block;
-      margin: 0 auto 30px auto;
-      border-radius: 10px;
+    @media (max-width: 800px) {
+      .intro-section {
+        grid-template-columns: 1fr;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
@@ -69,49 +133,53 @@
 
   <h1>About WMHD Radio</h1>
 
-  <img src="images/club-photo2.jpg" alt="WMHD Radio Club" class="clubimage">
+  <div class="intro-section">
+    <div class="intro-text">
+      <p>
+        WMHD Radio is a student-run radio that offers online music, equipment rentals, and DJ services for the Rose-Hulman Institute of Technology community.
+        Our studio is located in the basement of BSB Hall, room 032.
+      </p>
+      <p>
+        WMHD Online Radio has general club meetings in the basement of BSB, room 032.
+        The time for next quarter is still tentative.
+        In these meetings, we discuss/listen to music, plan events, stream live radio shows,
+        and run workshops on DJing, equipment setup, and recording.
+      </p>
+    </div>
+    <img src="images/club-photo2.jpg" alt="WMHD Radio Club" class="clubimage">
+  </div>
 
-  <p>
-    WMHD Radio is a student-run radio that offers online music, equipment rentals, and DJ services for the Rose-Hulman Institute of Technology community.
-    Our studio is located in the basement of BSB Hall, room 032.
-  </p>
+  <div class="content-grid">
+    <div class="grid-section">
+      <h2>Current Officers</h2>
+      <ul>
+        <li><b>General Manager/President</b>: Henry Morin</li>
+        <li><b>Equipment Manager</b>: No one!</li>
+        <li><b>Personnel Director</b>: Charlie L.</li>
+        <li><b>Program Director</b>: Peter F</li>
+        <li><b>Communications Director</b>: Paul Sampson</li>
+        <li><b>Webmaster</b>: James Harris</li>
+        <li><b>Treasurer</b>: Ben Wilson</li>
+        <li><b>Podcast Director</b>: Randyn</li>
+        <li><b>Faculty Advisor</b>: Landon</li>
+      </ul>
+    </div>
 
-  <h2>Club Meetings</h2>
-  <p>
-    WMHD Online Radio has general club meetings in the basement of BSB, room 032.
-    The time for next quarter is still tentative.
-    In these meetings, we discuss/listen to music, plan events, stream live radio shows,
-    and run workshops on DJing, equipment setup, and recording.
-  </p>
-
-  <h2>Current Officers</h2>
-  <ul>
-    <li><b>General Manager/President</b>: Henry Morin</li>
-    <li><b>Equipment Manager</b>: No one!</li>
-    <li><b>Personnel Director</b>: Charlie L.</li>
-    <li><b>Program Director</b>: Peter F</li>
-    <li><b>Communications Director</b>: Paul Sampson</li>
-    <li><b>Webmaster</b>: James Harris</li>
-    <li><b>Treasurer</b>: Ben Wilson</li>
-    <li><b>Podcast Director</b>: Randyn</li>
-    <li><b>Faculty Advisor</b>: Landon</li>
-  </ul>
-
-  <h2>Room Info</h2>
-  <p>
-    We have four main rooms in BSB basement: the Broadcasting Room (BSB032), Recording Studio (BSB030),
-    Podcasting Studio (BSB028), and Music Lounge (BSB022).
-    We also have a storage room for CDs, records, and equipment.
-    Every Rose-Hulman student is welcome to use the rooms.
-    See <a href="services.html">Services</a> for info about the recording and podcast studios.
-    Open hours are posted below.
-  </p>
-
-  <h2>Open Radio Room Hours and Weekly Events</h2>
-  <p>
-    <b>Open Hours:</b>
-    Posted in our Discord and outside our door. Contact an officer if you need access to the space.
-  </p>
+    <div class="grid-section">
+      <h2>Room Info</h2>
+      <p>
+        We have four main rooms in BSB basement: the Broadcasting Room (BSB032), Recording Studio (BSB030),
+        Podcasting Studio (BSB028), and Music Lounge (BSB022).
+        We also have a storage room for CDs, records, and equipment.
+        Every Rose-Hulman student is welcome to use the rooms.
+        See <a href="services.html">Services</a> for info about the recording and podcast studios.
+      </p>
+      <h2 style="margin-top: 20px;">Open Hours</h2>
+      <p>
+        Posted in our Discord and outside our door. Contact an officer if you need access to the space.
+      </p>
+    </div>
+  </div>
 
 </section>
 
