@@ -62,18 +62,24 @@ h1, h2, h3, p {
   max-width: 1100px;
   margin: auto;
   padding: 0 20px;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.nav-left,
+.nav-left {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .nav-right {
   display: flex;
   gap: 30px;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .nav-brand {
@@ -103,17 +109,6 @@ h1, h2, h3, p {
 .nav-right a:focus,
 .nav-right a:active {
   color: #FFD700;
-}
-
-@media (max-width: 700px) {
-  .nav-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-brand img {
-    height: 50px;
-  }
 }
 
 /* ================= SERVICES GRID ================= */
