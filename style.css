@@ -83,7 +83,7 @@ h1, h2, h3, p {
 .navbar {
   background: rgba(0,0,0,0.85);
   width: 100%;
-  padding: 10px 0;
+  padding: 7px 0;
   flex: 0 0 auto;
   order: 2;
 }
@@ -102,14 +102,14 @@ h1, h2, h3, p {
 
 .nav-left {
   display: flex;
-  gap: 100px;
+  gap: 150px;
   align-items: center;
   justify-content: flex-end;
 }
 
 .nav-right {
   display: flex;
-  gap: 100px;
+  gap: 150px;
   align-items: center;
   justify-content: flex-start;
 }
@@ -122,7 +122,7 @@ h1, h2, h3, p {
 }
 
 .nav-brand img {
-  height: 140px;
+  height: 98px;
   display: block;
   object-fit: contain;
 }
@@ -132,7 +132,7 @@ h1, h2, h3, p {
 .nav-right a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.7rem;
   transition: color 0.2s;
 }
 
