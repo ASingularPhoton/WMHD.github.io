@@ -167,58 +167,11 @@ body {
 
 @media (max-width: 768px) {
 
-  .textwrap h1 {
-    font-size: 2.2rem;
-  }
-
-  .textwrap h2 {
-    font-size: 1rem;
-  }
-
-  /* Stack navbar */
-  .nav-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .nav-left,
-  .nav-right {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav-container a {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  /* Center logo */
-  .nav-brand {
-    order: -1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .nav-brand img {
-    width: 70px;
-  }
-
-  /* Discord fades away on mobile */
-  .discord-overlay {
-    animation: fadeOut 1s ease forwards;
-    animation-delay: 5s;
-  }
-
-  .discord-overlay img {
-    width: 48px;
-    height: 48px;
-  }
-}
-@media (max-width: 768px) {
-
-  /* lock image to right side */
+  /* Hero height scaled to avoid navbar */
   .hero {
+    height: calc(100vh - 60px); /* Adjust 60px to match actual navbar height */
+    background-size: cover;
+    background-position: right bottom; /* keep default positioning */
   }
 
   .textwrap h1 {
@@ -269,6 +222,7 @@ body {
     height: 48px;
   }
 }
+
 
 </style>
 </head>
