@@ -167,42 +167,19 @@ body {
 
 @media (max-width: 768px) {
 
-  /* lock image to right side */
+  /* Prevent hero background from scrolling */
   .hero {
+    background-attachment: scroll; /* ensures the image stays in place relative to viewport */
     background-position: right center;
   }
 
-  .textwrap h1 {
-    font-size: 2.2rem;
-  }
-
-  .textwrap h2 {
-    font-size: 1rem;
-  }
-
-  /* Stack navbar */
-  .nav-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .nav-left,
-  .nav-right {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav-container a {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  /* Center logo */
+  /* Slightly shift the logo to the right */
   .nav-brand {
     order: -1;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* shift right slightly */
+    padding-left: 20px; /* adjust this value for the exact shift */
   }
 
   .nav-brand img {
@@ -220,6 +197,7 @@ body {
     height: 48px;
   }
 }
+
 
 </style>
 </head>
