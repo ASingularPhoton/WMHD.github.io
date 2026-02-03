@@ -44,22 +44,27 @@ html, body {
   background: rgba(0,0,0,0.6);
 }
 
+/* Perfect centering */
 .hero-content {
   position: relative;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding-bottom: 120px;
-  animation: fadeIn 0.8s ease;
+  padding-bottom: 120px; /* room for navbar */
+}
+
+.textwrap {
+  max-width: 800px;
 }
 
 .textwrap h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 
 .textwrap h2 {
+  font-size: 1.2rem;
   font-weight: 300;
   margin-bottom: 10px;
 }
@@ -67,7 +72,7 @@ html, body {
 .heavy { font-weight: 900; }
 .light { font-weight: 300; }
 
-/* ================= NAVBAR (BOTTOM) ================= */
+/* ================= BOTTOM NAVBAR ================= */
 
 .navbar {
   position: fixed;
@@ -116,7 +121,7 @@ html, body {
 .discord-overlay {
   position: fixed;
   right: 20px;
-  bottom: 140px; /* above navbar */
+  bottom: 20px;   /* desktop bottom-right */
   z-index: 900;
 }
 
@@ -127,13 +132,11 @@ html, body {
 
 /* ================= ANIMATIONS ================= */
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 @keyframes fadeOut {
-  to { opacity: 0; visibility: hidden; }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /* ================= MOBILE ================= */
@@ -165,12 +168,13 @@ html, body {
     padding: 8px 12px;
   }
 
-  /* Center logo */
+  /* Center logo on mobile */
   .nav-brand {
     order: -1;
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
+
     animation: fadeOut 1s ease forwards;
     animation-delay: 5s;
   }
@@ -179,11 +183,10 @@ html, body {
     width: 70px;
   }
 
-  /* Discord visible on mobile */
+  /* Discord above navbar on mobile */
   .discord-overlay {
     bottom: 160px;
     right: 15px;
-    display: block;
   }
 
   .discord-overlay img {
