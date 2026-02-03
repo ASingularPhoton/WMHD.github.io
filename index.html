@@ -37,14 +37,14 @@ html, body {
   position: relative;
 }
 
+/* SINGLE subtle dark overlay */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.35);
 }
 
-/* Perfect centering */
 .hero-content {
   position: relative;
   min-height: 100vh;
@@ -52,7 +52,8 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-bottom: 120px; /* room for navbar */
+  padding-bottom: 120px; /* space for navbar */
+  z-index: 2;
 }
 
 .textwrap {
@@ -72,7 +73,7 @@ html, body {
 .heavy { font-weight: 900; }
 .light { font-weight: 300; }
 
-/* ================= BOTTOM NAVBAR ================= */
+/* ================= NAVBAR ================= */
 
 .navbar {
   position: fixed;
@@ -121,8 +122,8 @@ html, body {
 .discord-overlay {
   position: fixed;
   right: 20px;
-  bottom: 20px;   /* desktop bottom-right */
-  z-index: 900;
+  bottom: 20px;
+  z-index: 5000;   /* always on top */
 }
 
 .discord-overlay img {
@@ -174,19 +175,16 @@ html, body {
     width: 100%;
     display: flex;
     justify-content: center;
-
-    animation: fadeOut 1s ease forwards;
-    animation-delay: 5s;
   }
 
   .nav-brand img {
     width: 70px;
   }
 
-  /* Discord above navbar on mobile */
+  /* Discord fades away after 5s on mobile */
   .discord-overlay {
-    bottom: 160px;
-    right: 15px;
+    animation: fadeOut 1s ease forwards;
+    animation-delay: 5s;
   }
 
   .discord-overlay img {
