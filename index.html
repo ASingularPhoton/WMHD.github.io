@@ -29,18 +29,19 @@ html, body {
 /* ================= HERO ================= */
 
 .hero {
-  position: relative;
+  min-height: 100vh;
   width: 100%;
-  height: 70vh;
   background-image: url("./images/background.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
-.overlay {
+.hero::after {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.6);
 }
 
 .hero-content {
@@ -50,7 +51,8 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  animation: fadeIn 0.8s ease-in-out;
+  padding-bottom: 120px;
+  animation: fadeIn 0.8s ease;
 }
 
 .textwrap h1 {
@@ -65,21 +67,25 @@ html, body {
 .heavy { font-weight: 900; }
 .light { font-weight: 300; }
 
-/* ================= NAVBAR ================= */
+/* ================= NAVBAR (BOTTOM) ================= */
 
 .navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.95);
   padding: 12px 0;
+  z-index: 1000;
 }
 
 .nav-container {
   max-width: 1100px;
   margin: auto;
+  list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  list-style: none;
 }
 
 .nav-left,
@@ -102,15 +108,16 @@ html, body {
 
 .nav-brand img {
   width: 90px;
+  display: block;
 }
 
-/* ================= DISCORD FLOAT ================= */
+/* ================= DISCORD BUTTON ================= */
 
 .discord-overlay {
   position: fixed;
-  top: 25px;
-  right: 25px;
-  z-index: 999;
+  right: 20px;
+  bottom: 140px; /* above navbar */
+  z-index: 900;
 }
 
 .discord-overlay img {
@@ -118,7 +125,7 @@ html, body {
   height: 60px;
 }
 
-/* ================= ANIMATION ================= */
+/* ================= ANIMATIONS ================= */
 
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -133,10 +140,18 @@ html, body {
 
 @media (max-width: 768px) {
 
+  .textwrap h1 {
+    font-size: 2.2rem;
+  }
+
+  .textwrap h2 {
+    font-size: 1rem;
+  }
+
   /* Stack navbar */
   .nav-container {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 
   .nav-left,
@@ -150,8 +165,12 @@ html, body {
     padding: 8px 12px;
   }
 
-  /* Logo fades away after 5 seconds */
+  /* Center logo */
   .nav-brand {
+    order: -1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     animation: fadeOut 1s ease forwards;
     animation-delay: 5s;
   }
@@ -160,32 +179,16 @@ html, body {
     width: 70px;
   }
 
-  /* Discord moves bottom-right */
+  /* Discord visible on mobile */
   .discord-overlay {
-    top: auto;
-    bottom: 15px;
+    bottom: 160px;
     right: 15px;
+    display: block;
   }
 
   .discord-overlay img {
     width: 48px;
     height: 48px;
-  }
-
-  /* Hero text smaller */
-  .textwrap h1 {
-    font-size: 2.2rem;
-  }
-
-  .textwrap h2 {
-    font-size: 1rem;
-  }
-}
-
-/* Hide Discord on very small phones */
-@media (max-width: 480px) {
-  .discord-overlay {
-    display: none;
   }
 }
 
@@ -194,7 +197,7 @@ html, body {
 
 <body>
 
-<!-- Discord Button -->
+<!-- Discord -->
 <div class="discord-overlay">
   <a href="https://discord.gg/qm2C9yDzVq" target="_blank">
     <img src="./images/discordlogo.jpg" alt="Join our Discord">
@@ -203,7 +206,6 @@ html, body {
 
 <!-- HERO -->
 <section class="hero">
-  <div class="overlay"></div>
   <div class="hero-content">
     <div class="textwrap">
       <h2>Where Music Has Dimension</h2>
