@@ -39,13 +39,15 @@ body {
 /* ================= HERO ================= */
 
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   background-image: url("./images/background.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: right bottom;   /* lock to bottom-right */
+  background-repeat: no-repeat;
   position: relative;
 }
+
 
 /* single subtle overlay */
 .hero::after {
