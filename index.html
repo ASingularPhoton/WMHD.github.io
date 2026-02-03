@@ -10,7 +10,6 @@
 <style>
 
 /* ================= RESET ================= */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,10 +36,9 @@ body {
 }
 
 /* ================= HERO ================= */
-
 .hero {
   width: 100%;
-  height: 100vh; /* full viewport height by default */
+  height: 100vh;
   background-image: url("./images/background.jpg");
   background-size: cover;
   background-position: right bottom;
@@ -84,7 +82,6 @@ body {
 .light { font-weight: 300; }
 
 /* ================= NAVBAR ================= */
-
 .navbar {
   position: fixed;
   bottom: 0;
@@ -137,7 +134,6 @@ body {
 }
 
 /* ================= DISCORD BUTTON ================= */
-
 .discord-overlay {
   position: fixed;
   right: 20px;
@@ -151,7 +147,6 @@ body {
 }
 
 /* ================= ANIMATIONS ================= */
-
 @keyframes fadeOut {
   to {
     opacity: 0;
@@ -160,12 +155,17 @@ body {
 }
 
 /* ================= MOBILE ================= */
-
 @media (max-width: 768px) {
 
-  /* Hero height adjusted to avoid navbar overlap */
+  /* Lock scrolling */
+  html, body {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  /* Hero height scaled to fit above navbar */
   .hero {
-    height: calc(100vh - 60px); /* 60px matches navbar height */
+    height: calc(100vh - 60px); /* adjust 60px if navbar height changes */
     background-size: cover;
     background-position: center center;
   }
@@ -178,7 +178,7 @@ body {
     font-size: 1rem;
   }
 
-  /* Stack navbar */
+  /* Stack navbar vertically */
   .nav-container {
     flex-direction: column;
     gap: 10px;
