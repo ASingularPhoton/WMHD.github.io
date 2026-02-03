@@ -26,6 +26,16 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Page fade-in */
+body {
+  animation: pageFade 0.8s ease;
+}
+
+@keyframes pageFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 /* ================= HERO ================= */
 
 .hero {
@@ -37,7 +47,7 @@ html, body {
   position: relative;
 }
 
-/* SINGLE subtle dark overlay */
+/* single subtle overlay */
 .hero::after {
   content: "";
   position: absolute;
@@ -52,7 +62,7 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-bottom: 120px; /* space for navbar */
+  padding-bottom: 120px;
   z-index: 2;
 }
 
@@ -107,9 +117,20 @@ html, body {
   font-size: 15px;
 }
 
-.nav-container a:hover {
+/* Hover only for text links */
+.nav-left a:hover,
+.nav-right a:hover {
   background: rgba(255,255,255,0.15);
   border-radius: 4px;
+}
+
+/* Remove highlight from logo */
+.nav-brand a {
+  padding: 0;
+}
+
+.nav-brand a:hover {
+  background: none;
 }
 
 .nav-brand img {
@@ -123,7 +144,7 @@ html, body {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 5000;   /* always on top */
+  z-index: 5000;
 }
 
 .discord-overlay img {
@@ -143,6 +164,11 @@ html, body {
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
+
+  /* lock image to right side */
+  .hero {
+    background-position: right center;
+  }
 
   .textwrap h1 {
     font-size: 2.2rem;
@@ -169,7 +195,7 @@ html, body {
     padding: 8px 12px;
   }
 
-  /* Center logo on mobile */
+  /* Center logo */
   .nav-brand {
     order: -1;
     width: 100%;
@@ -181,7 +207,7 @@ html, body {
     width: 70px;
   }
 
-  /* Discord fades away after 5s on mobile */
+  /* Discord fades away on mobile */
   .discord-overlay {
     animation: fadeOut 1s ease forwards;
     animation-delay: 5s;
