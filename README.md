@@ -1,3 +1,5 @@
 # WMHD.github.io
 WMHD website for Rose-Hulman
-https://asingularphoton.github.io/WMHD.github.io/
+wmhd-radio.github.io/WMHD.github.io/
+
+This is my final message, among us - James
